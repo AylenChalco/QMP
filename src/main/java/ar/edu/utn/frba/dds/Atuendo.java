@@ -1,13 +1,18 @@
 package ar.edu.utn.frba.dds;
 
-import java.util.List;
+import java.util.Set;
 
 public class Atuendo {
-  List<Prenda> prendas;
+  Prenda superior;
+  Prenda inferior;
+  Prenda calzado;
+  Set<Prenda> accesorios;
 
-  public void cargarPrendaValida(Prenda prenda) {
-    if (prenda.esValida()) {
-      prendas.add(prenda);
-    }
+  public Atuendo (Prenda superior, Prenda inferior, Prenda calzado, Set<Prenda> accesorios){
+    this.superior = superior;
+    this.inferior = inferior;
+    this.calzado = calzado;
+    this.accesorios = accesorios;
   }
+
 }
